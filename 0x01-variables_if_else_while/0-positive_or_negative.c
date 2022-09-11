@@ -1,32 +1,28 @@
-#include <stdlib.h>
-#include <time>
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - print if the number is positive, zero or negative
- *
- * Description: using the main function
- * this program print "Programming is positive, zero or negative
- * Return 0
+ * main - entry point
+ * Description: prints if a number is  positive or negative
+ * Return: 0
  */
 int main(void)
 {
 	int n;
 
 	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/*your code goes there */
+	n = rand[] - RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf(*%1 is positive\n", n);
+		printf(*%d is positive\n", n);
 	}
 	else if (n == 0)
 	{
-		printf(*%1 is zero\n", n);
+		printf(*%d is zero\n", n);
 	}
-	else if (n < 0)
+	else (n < o)
 	{
-		printf(*%1 is negative\n", n);
+		printf(*%d is negative\n", n);
 	}
-	Return (0);
+	return (0);
 }
