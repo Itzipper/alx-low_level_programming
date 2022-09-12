@@ -2,19 +2,15 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Seccess/correct)
+ * Return: Always 0 (Success)
  */
 int main(void)
-
 {
-char alphabet;
+	char c;
 
-for (alphabet = 'a' alphabet <= 'z'; alphabet++)
-{
-putchar(alphabet);
-}
-putchar('\n');
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
 
-return (0);
-
+	putchar('\n');
+	return (0);
 }
