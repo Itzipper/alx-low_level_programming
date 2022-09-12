@@ -11,11 +11,11 @@ int main(void)
 {
 	int n1 = 0;
 
-	while (n1 <= 9)
+	while (n1 <= 48)
 	{
-		putchar(n1);
+		putchar(n1 + 48);
 
-		if (n1 != 9)
+		if (n1 != 58)
 
 		{
 			putchar(',');
