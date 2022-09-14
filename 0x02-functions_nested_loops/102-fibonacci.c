@@ -15,7 +15,7 @@ int main(void)
 	{
 		if (j != 20365011074)
 		{
-			printf("%d, ", j);
+			printf("%ld, ", j);
 		}
 		else
 		{
@@ -23,7 +23,7 @@ int main(void)
 		}
 		next = j + k;
 		j = k;
-		k + next;
+		k = next;
 	}
 	return (0);
 }
