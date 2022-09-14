@@ -1,40 +1,33 @@
 #include "main.h"
 /**
- * jack_bauer -> prints 24 hours
+ * jack_bauer - function prints every min
+ * n from 00 : 00 to 23 : 59, min loop counts
+ * and resets mins
+ * Return: 0
+ *
  */
 void jack_bauer(void)
 {
-	int i, j;
+	int hours = 0;
+	int minutes = 0;
+	int hours_remainder;
+	int mins_remainder;
 
-	for (i = 0; i < 24; i++)
+	while (hours <= 23)
 	{
-		for (j = 0; j < 60; j++)
+		while (minutes <= 59)
 		{
-			if (i < 10)
-			{
-				_putchar('0');
-				_putchar(1 + '0');
-			}
-			else if (i >= 10)
-			{
-				_putchar((i / 10) + '0');
-				_putchar((i % 10) + '0');
-			}
-			if (j < 10)
-			{
-				_putchar(':');
-				_putchar('0');
-				_putchar(j + '0');
-			}
-			else if (j >= 10)
-			{
-				_putchar(':');
-				_putchar((j / 10) + '0');
-				_putchar((j % 10) + '0');
-			}
+			mins_remainder = minutes % 10;
+			hours_remainder = hours % 10;
+			_putchar(hours / 10 + '0');
+			_putchar(hours remainder + '0');
+			_putchar(',');
+			_putchar(minutes / 10 + '0');
+			_putchar(mins_remainder + '0');
+			minutes++;
 			_putchar('\n');
 		}
-		i++;
-		j = 0;
+		hours++;
+		minutes = 0;
 	}
 }
