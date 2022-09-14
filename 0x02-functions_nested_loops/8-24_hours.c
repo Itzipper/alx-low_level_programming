@@ -34,5 +34,7 @@ void jack_bauer(void)
 			}
 			_putchar('\n');
 		}
+		i++;
+		j = 0;
 	}
 }
