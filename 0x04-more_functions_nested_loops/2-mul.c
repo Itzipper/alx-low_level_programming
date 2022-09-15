@@ -2,12 +2,12 @@
 
 /**
  * mul - multiplies two numbers
- * @a: First number
- * @b: Second number
+ * @a: first number
+ * @b: second number
  * Return: returns result
  */
 
-int mult(int a, int b)
+int mul(int a, int b)
 {
 	return (a * b);
 }
