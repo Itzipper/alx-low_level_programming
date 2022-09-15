@@ -1,6 +1,7 @@
 #include <stdio.h>
+
 /**
- * *main prints the largest prime factor
+ * main - prints the largest prime factor
  * of a number
  *
  * Return: return 0
@@ -24,5 +25,6 @@ int main(void)
 				number /= inc;
 		}
 	}
-	putchar('\n');
+	printf("%d\n", number);
+	return (0);
 }
