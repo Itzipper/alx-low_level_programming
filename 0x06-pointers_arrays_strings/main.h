@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * void prototypes()
- * *int prototypes()
+ * int prototypes()
  * char prototypes()
  */
 void reverse_array(int *a, int n);
