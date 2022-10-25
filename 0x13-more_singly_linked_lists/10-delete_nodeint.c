@@ -1,28 +1,39 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - prints a linked list, safely
- * @head: list of type listint_t to print
+ * delete_nodeint_at_index - deletes a node in a linked list at a certain index
+ * @head: pointer to the first element in the list
+ * @index: index of the node to delete
  *
- * Return: number of nodes in the list
+ * Return: 1 (Success), or -1 (Fail)
  */
-size_t print_listint_safe(const listint_t *head)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	size_t num = 0;
-	long int diff;
+	listint_t *temp = *head;
+	listint_t *current = NULL;
+	unsigned int i = 0;
 
-	while (head)
+	if (*head == NULL)
+	return (-1);
+
+	if (index == 0)
 	{
-		diff = head - head->next;
-		num++;
-		printf("[%p] %d\n", (void *)head, head->n);
-		if (diff > 0)
-			head = head->next;
-		else
-		{
-			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-			break;
-		}
+	*head = (*head)->next;
+	free(temp);
+	return (1);
 	}
 
-	return (num);
+	while (i < index - 1)
+	{
+	if (!temp || !(temp->next))
+	return (-1);
+	temp = temp->next;
+	i++;
+	}
+
+	current = temp->next;
+	temp->next = current->next;
+	free(current);
+
+	return (1);
+}
